@@ -11,7 +11,7 @@ public class DashboardGUI {
     public DashboardGUI(List<EnergyReading> readings){
         this.readings = readings;
     }
-
+    // Show Energy Dashboard
     public void show() {
         System.out.println(" Energy Dashboard ");
 
