@@ -9,17 +9,26 @@ public class AirConditioner extends Equipment{
         this.temperature = temperature;
     }
 
+    public AirConditioner(int id, String name, double energyConsumption) {
+        super(id, name, energyConsumption);
+        this.temperature = 25;
+    }
+
     public double getTemperature() {
         return temperature;
     }
 
     @Override
+    public String getEquipmentType() {
+        return "AirConditioner";
+    }
+
+    @Override
     public void displayInfo() {
+        super.displayInfo();
+
         System.out.println(
-            "Equipment ID: " + id +
-            " | Type: AirConditioner" +
-            " | Name: " + name +
-            " | Consumption: " + energyConsumption + " W" +
+            
             " | Temperature: " + temperature + "°C"
         );
     }

@@ -10,6 +10,12 @@ public class Projector extends Equipment {
         this.projectorType = cleanText(projectorType, "Unknown Type");
     }
 
+    public Projector(int id, String name, double energyConsumption) {
+        super(id, name, energyConsumption);
+        this.resolution = "1080p";
+        this.projectorType = "LCD";
+    }
+
     public String getResolution() {
         return resolution;
     }
@@ -32,18 +38,18 @@ public class Projector extends Equipment {
 
     @Override
     public String getEquipmentType() {
-        return "projector";
+        return "Projector";
     }
 
     @Override
     public void displayInfo() {
+        super.displayInfo();
+
         System.out.println(
-            "Equipment ID: " + id +
-            " | Type: " + getEquipmentType() +
-            " | Name: " + name +
-            " | Expected Consumption: " + energyConsumption + " kWh" +
+            
             " | Resolution: " + resolution +
             " | Projector Type: " + projectorType
+
         );
     }
 }

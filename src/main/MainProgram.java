@@ -59,6 +59,10 @@ public class MainProgram {
         testEquipment.add(new AirConditioner(2, "Ductless AC", 1500, 18));
         testEquipment.add(new Projector(3, "Class Projector", 300, "1080p", "LCD"));
 
+        testEquipment.add(new Light(4, "Front Light", 50));
+        testEquipment.add(new AirConditioner(5, "Ductless AC", 1500));
+        testEquipment.add(new Projector(6, "Class Projector", 300));
+
         for (Equipment e : testEquipment) {
             e.displayInfo();
         }

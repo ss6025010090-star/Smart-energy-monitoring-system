@@ -70,6 +70,12 @@ public class Room implements Displayable{
         }
     }
 
+    public void addEquipment(Equipment equipment) {
+        if (equipmentList != null) {
+            equipmentList.add(equipment);
+        }
+    }
+
     @Override
     public void displayInfo() {
         System.out.println("Room " + number + " | Floor " + floor);

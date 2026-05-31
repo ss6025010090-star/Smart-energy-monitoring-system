@@ -11,6 +11,12 @@ public class Light extends Equipment {
         this.lightType = cleanText(lightType, "LED");
     }
 
+    public Light(int id, String name, double energyConsumption) {
+        super(id, name, energyConsumption);
+        this.brightnessLevel = 50;
+        this.lightType = "LED";
+    }
+
     public int getBrightnessLevel() {
         return brightnessLevel;
     }
@@ -40,13 +46,12 @@ public class Light extends Equipment {
 
     @Override
     public void displayInfo() {
+        super.displayInfo();
         System.out.println(
-            "Equipment ID: " + id +
-            " | Type: " + getEquipmentType() +
-            " | Name: " + name +
-            " | Expected Consumption: " + energyConsumption + " kWh" +
+            
             " | Brightness: " + brightnessLevel + "%" +
             " | Light Type: " + lightType
+
         );
     }
 
